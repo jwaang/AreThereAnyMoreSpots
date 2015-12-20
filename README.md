@@ -7,7 +7,7 @@ Texas A&M classes get taken up very fast, however some spots open up randomly. I
 # Requirements
 Selenium  
 ChromeDriver  
-Be an A&M student :+1:    
+A&M login :+1:    
 Python 2.7 :snake:
 
 # Trials and Tribulation
