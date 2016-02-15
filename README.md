@@ -1,5 +1,5 @@
-# AreThereAnyMoreSpots or (ATAMS)
-Sends an email notification if there are spots available for the class
+# AreThereAnyMoreSpots  
+Sends an email notification if there are spots available for the class. Works for both PC and Mac.
 
 # Problem
 Texas A&M classes get taken up very fast, however some spots open up randomly. I don't have time to constantly check if any spots are open for the classes I want to take, so I decided to make this. I've also always been very interested in web scraping so this is my first attempt at it.
@@ -7,7 +7,7 @@ Texas A&M classes get taken up very fast, however some spots open up randomly. I
 # Requirements
 Selenium  
 ChromeDriver  
-A&M login
+A&M login  
 Python 2.7
 
 # Problems
