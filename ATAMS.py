@@ -13,7 +13,7 @@ email_user = config.get('info', 'EMAIL_USER')
 email_pass = config.get('info', 'EMAIL_PASS')
 path = config.get('info', 'PATH')
 url = config.get('info', 'URL')
-br = webdriver.Chrome(executable_path = path)
+br = webdriver.Chrome()
 removelist=[]
 
 # email
@@ -31,7 +31,8 @@ def send_msg(username, password, subj, msg):
 # remove
 def remove(removelist, classname):
     # write back
-    for x in removelist: classname.remove(x)
+    for x in removelist:
+        classname.remove(x)
     config.set('info', 'CLASSNAME', '[' + ', '.join('"' + item + '"' for item in classname) + ']')
     with open('info.ini', 'w') as configfile: config.write(configfile)
     classname = eval(config.get("info", 'CLASSNAME'), {}, {})
@@ -107,5 +108,6 @@ def check(classname):
 while True:
     check(classname)
     remove(removelist, classname)
+    removelist=[]                   # reset remove list
     print '\n***RESTARTING***\n\n'
     time.sleep(5)
