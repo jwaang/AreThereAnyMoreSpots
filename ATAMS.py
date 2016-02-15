@@ -13,7 +13,8 @@ email_user = config.get('info', 'EMAIL_USER')
 email_pass = config.get('info', 'EMAIL_PASS')
 path = config.get('info', 'PATH')
 url = config.get('info', 'URL')
-br = webdriver.Chrome()
+br = webdriver.Chrome()     # for Mac
+br = webdriver.Chrome(executable_path = path) # for Windows
 removelist=[]
 
 # email
