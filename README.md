@@ -19,4 +19,4 @@ The procedure was fairly simple, all I had to do was tell Selenium what elements
 [x] Search if class has spots  
 [x] Email  
 [x] Loop for multiple class searches  
-[ ] Auto Register
+[x] Auto Register
