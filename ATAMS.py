@@ -1,9 +1,12 @@
 from ConfigParser import SafeConfigParser
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import smtplib
 import time
 
 # config
+# I set a direct path variable for chromedriver for Windows. For Mac, I install chromedriver to usr/bin (no need for this path variable)
+# path = xxx/chromedriver
 config = SafeConfigParser()
 config.read('info.ini')
 classname = eval(config.get("info", 'CLASSNAME'), {}, {})
@@ -95,6 +98,7 @@ def check(classname):
                     br.back()
                     br.back()
                     br.back()
+                    signup(crn)
                     time.sleep(1)
                     break
                 else:
@@ -104,6 +108,22 @@ def check(classname):
                     br.back()
                     time.sleep(1)
                     break
+
+# auto signup!
+def signup(crn):
+    br.back()
+    br.find_element_by_xpath("//*[@id='customBulletedList']/li[2]/a").click()
+    br.switch_to.default_content()
+    br.switch_to.frame(1)
+    br.find_element_by_xpath("/html/body/div[3]/form/input").click()
+    br.find_element_by_id('crn_id1').send_keys(crn)
+    br.find_element_by_id('crn_id1').send_keys(Keys.RETURN)
+    # brings us back to My Record page
+    br.back()
+    br.back()
+    br.back()
+    print 'Navigating to "Search Class Schedule"\n'
+    br.find_element_by_xpath("//li[1]/*[contains(text(), 'Search Class Schedule')]").click()
 
 # LOOPER
 while True:
