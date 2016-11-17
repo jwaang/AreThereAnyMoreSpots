@@ -10,6 +10,10 @@ ChromeDriver
 A&M login  
 Python 2.7
 
+# Setup
+To enable the e-mail feature, please Turn on access for less secure apps. You can do so by visting this link: https://www.google.com/settings/security/lesssecureapps?rfn=27&rfnc=1&et=0&asae=2&anexp=ire-control  
+
+
 # Problems
 This was my first real project I ever did with Python so the code might be a little bit messy and inefficient, but I honestly had a lot of fun making this. I first tried to use requests library however I could not get past the login page, because my school's robot.txt was set to "Disallow: /" and I couldn't find a workaround. My second attempt was with mechanize, however after successfully logging in, I realized that mechanize could not run Javascript (which was required by the website). My third attempt was to use Selenium which <i>finally</i> worked.  
 The procedure was fairly simple, all I had to do was tell Selenium what elements to press and what to look out for. My main trouble was not finding what elements to press, but how to syntactically tell Selenium what elements to press. In the end, things started becoming easier as I slowly got the hang of it.
