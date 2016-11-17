@@ -113,9 +113,10 @@ def check(classname):
 # auto signup!
 def signup(crn):
     br.back()
-    br.find_element_by_xpath("//*[@id='customBulletedList']/li[2]/a").click()
+    br.find_element_by_xpath("//*[@id='portletContent_u42l1n120']/div/ul/li[3]/a[1]").click()
     br.switch_to.default_content()
-    br.switch_to.frame(1)
+    br.switch_to.frame('Pluto_92_ctf3_2929_tw_frame')
+    #br.switch_to.frame(1)
     br.find_element_by_xpath("/html/body/div[3]/form/input").click()
     br.find_element_by_id('crn_id1').send_keys(crn)
     br.find_element_by_id('crn_id1').send_keys(Keys.RETURN)
@@ -124,7 +125,7 @@ def signup(crn):
     br.back()
     br.back()
     print 'Navigating to "Search Class Schedule"\n'
-    br.find_element_by_xpath("//li[1]/*[contains(text(), 'Search Class Schedule')]").click()
+    br.find_element_by_xpath("//*[@id='portletContent_u42l1n120']/div/ul/li[2]/a[1]").click()
 
 # LOOPER
 while True:
