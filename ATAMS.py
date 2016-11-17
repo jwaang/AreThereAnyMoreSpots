@@ -52,14 +52,15 @@ br.find_element_by_xpath("//*[@id='loginCol1']/div[3]/button").click()
 print 'Navigating to "My Record"'
 br.find_element_by_xpath("//*[contains(text(), 'My Record')]").click()
 print 'Navigating to "Search Class Schedule"\n'
-br.find_element_by_xpath("//li[1]/*[contains(text(), 'Search Class Schedule')]").click()
+br.find_element_by_xpath("//*[@id='portletContent_u42l1n120']/div/ul/li[2]/a[1]").click()
 
 # start
 def check(classname):
     for i in xrange(0, len(classname)):
         br.switch_to.default_content()
         print 'Submitting'
-        br.switch_to.frame(1)   # need switch to access form
+        br.switch_to.frame('Pluto_92_ctf3_2929_tw_frame')
+        #br.switch_to.frame(1)   # need switch to access form
         time.sleep(1)
         br.find_element_by_xpath("//div[3]/form/input[2]").click()
 
